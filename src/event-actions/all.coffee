@@ -39,7 +39,6 @@ module.exports =
   push: (data, callback) ->
     callback "New push to \"#{data.repository.name}\" by #{data.pusher.name}: #{data.compare}"
 
-
   page_build: (data, callback) ->
     build = data.build
     if build?
