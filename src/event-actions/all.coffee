@@ -35,6 +35,11 @@ module.exports =
   pull_request: (data, callback) ->
     buildNewIssueOrPRMessage(data, 'pull_request', callback)
 
+# from https://github.com/hubot-scripts/hubot-github-repo-event-notifier/pull/22/files
+  push: (data, callback) ->
+    callback "New push to \"#{data.repository.name}\" by #{data.pusher.name}: #{data.compare}"
+
+
   page_build: (data, callback) ->
     build = data.build
     if build?
